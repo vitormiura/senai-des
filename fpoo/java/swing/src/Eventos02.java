@@ -22,7 +22,7 @@ public class Eventos02 extends JFrame{
         c.setLayout(new GridLayout(3,2));
         c.add(new JLabel("Login:"));
         c.add(login);
-        c.add(new JLabel("Senha: "));
+        c.add(new JLabel("Senha:"));
         c.add(senha);
         c.add(ok);
         c.add(cancel);
