@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <link rel="stylesheet" href="_css/style.css">
+    <title>Calculo IMC</title>
+</head>
+<body>
+    <section class="container">
+        <br><h1>Calcule seu IMC</h1><br>
+        <form action="/" id="formulario" method="POST">
+          <label for="peso">Peso:</label>
+          <input type="text" id="peso" name="peso" placeholder="Quilos">
+          <label for="altura">Altura:</label>
+          <input type="text" id="altura" name="altura" placeholder="Metros">
+          <button type="submit">Calcular!</button>
+        </form>
+        <div id="resultado"> 
+        </div>
+    </section>
+    <script src="_javascript/javascript.js"></script>
+    <footer>
+        <div>
+          © 2021 Copyright:
+          <a>Vitor Miura</a>
+        </div>
+    </footer>
+</body>
+</html>

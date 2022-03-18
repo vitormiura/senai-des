@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Montserrat&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: beige;
+}
+body{
+    background: rgb(218,28,28);
+    background: radial-gradient(circle, rgba(218,28,28,1) 0%, rgba(9,8,8,1) 100%);
+}
+header3{
+    display: flex;
+    justify-content: space-around;
+    background-color:black;
+}
+
+input[type="email"],
+input[type="password"]{
+    padding: 6px 15px;
+    border-radius: 5px;
+    font-size: medium;
+    border:solid 1px gray;
+}
+
+.logar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero{   
+    padding: 4rem 6rem;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.container p{
+    padding: 2rem 0rem;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+}
+h1{
+    font-weight: normal;
+    font-size: 3rem;
+}
+.botao{
+    background-color: rgb(248, 66, 66);
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.secondary{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.botao:hover{
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(185, 47, 47);
+}
+.cartoes{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 0rem;
+}
+.cards{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(248, 66, 66);
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.cards.azul{
+    background-color: rgb(81, 54, 177);
+}
+.cards.verde{
+    background-color: rgb(61, 211, 99);
+}
+footer{
+    padding-top: 2rem;
+    text-align: center;
+}
+.redes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 2em;
+    padding-top: 2rem;
+}
+
