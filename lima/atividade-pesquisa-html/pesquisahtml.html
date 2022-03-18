@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head>
+      <title>pesquisahtml</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lab10\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="pesquisa-elementos-de-programa%C3%A7%C3%A3o-em-html">Pesquisa - Elementos de programa&#xE7;&#xE3;o em HTML</h1>
+
+<h5 class="mume-header" id="feito-por-guilherme-hidek-abe-e-vitor-miura">Feito por: Guilherme Hidek Abe e Vitor Miura</h5>
+
+<hr>
+<p>Os elementos an&#xE1;lisados ser&#xE3;o:</p>
+<ol>
+<li>Formato de cores (hexadecimal, RGB).</li>
+<li>Psicologia das cores.</li>
+<li>Cores em elementos de texto.</li>
+<li>Cores em elementos de fundo (background).</li>
+<li>Tipos de extens&#xF5;es para manipula&#xE7;&#xE3;o de imagens.</li>
+<li>Imagens como elemento.</li>
+<li>Imagens em elementos de fundo (background).</li>
+<li>V&#xED;deos.</li>
+</ol>
+<hr>
+<h2 class="mume-header" id="1-formato-de-cores-nome-hexadecimal-e-rgb">1. Formato de cores (nome, hexadecimal e RGB).</h2>
+
+<p>No HTML, as cores podem ser nomeadas pelo nome (em Ingl&#xEA;s), como White para branco, green, para verde, blue, para azul e assim por diante.</p>
+<p>Podem ser codificadas, por n&#xFA;meros hexadecimais, como, FFAA00 &#x2013; 1,2,3,4,5,6,7,8,9,a,b,c,d,e,f.</p>
+<p>Os c&#xF3;digos s&#xE3;o como uma misturas de cores RGB (Red &#x2013; Vermelho, Green &#x2013; Verde, Blue &#x2013; Azul), o c&#xF3;digo hexadecimal for 006600, deduz-se que a cor &#xE9; verde, pois os dois primeiros n&#xFA;meros (que correspondem ao vermelho &#x2013; RRGGBB), s&#xE3;o 0, os dois n&#xFA;meros do meio, s&#xE3;o 6 e os dois n&#xFA;meros finais s&#xE3;o 0.</p>
+<p>Para escrever uma cor codificada, usa-se # antes do c&#xF3;digo, e dentro das aspas, por exemplo, &#x201C;#550000&#x201D;.</p>
+<h3 class="mume-header" id="exemplo-da-tabela-de-tons-de-cinza-gray-colors">Exemplo da tabela de Tons de Cinza - Gray Colors</h3>
+
+<p><img src="./imgs/tabela.PNG" alt="Tabela" title="Tabela"></p>
+<hr>
+<h2 class="mume-header" id="2-psicologia-das-cores">2. Psicologia das cores.</h2>
+
+<p>Como seres sensoriais, desvendamos o mundo atrav&#xE9;s de nossos sentidos; um som, um gosto ou um cheiro trazem rea&#xE7;&#xF5;es instant&#xE2;neas para nossa mente. E com as cores, n&#xE3;o &#xE9; diferente. Um matiz pode ter in&#xFA;meras interpreta&#xE7;&#xF5;es e trazer &#xE0; tona muitos sentimentos. Entender como a cor de um projeto para web pode transmitir seguran&#xE7;a &#xE9; essencial para um designer.</p>
+<p>Por meio de experimentos e estudos, podemos determinar a efic&#xE1;cia de tons espec&#xED;ficos para cada tipo de necessidade de comunica&#xE7;&#xE3;o. Existem cores capazes de indicar o segmento de uma empresa, se ela &#xE9; arrojada ou conservadora, se ela quer transmitir divers&#xE3;o ou mais seriedade etc.</p>
+<p>A cor exata pode encurtar a dist&#xE2;ncia entre a marca e o cliente, tornando-a de f&#xE1;cil reconhecimento. Tamb&#xE9;m &#xE9; capaz de comunicar sentimentos e ressaltar no&#xE7;&#xF5;es j&#xE1; existentes de um determinado produto ou servi&#xE7;o.</p>
+<h3 class="mume-header" id="significado-das-cores">Significado das cores</h3>
+
+<h5 class="mume-header" id="amarelo">Amarelo:</h5>
+
+<p>Otimismo, felicidade, desenvolvimento e clareza. O amarelo estimula os processos mentais e o sistema nervoso, ativa a mem&#xF3;ria e encoraja a comunica&#xE7;&#xE3;o.</p>
+<h5 class="mume-header" id="verde">Verde:</h5>
+
+<p>Riqueza, natureza, crescimento e sa&#xFA;de. Essa cor acalma, traz harmonia e renova&#xE7;&#xE3;o, relaxa o corpo e ajuda a aliviar a ansiedade.</p>
+<h5 class="mume-header" id="azul">Azul:</h5>
+
+<p>Confian&#xE7;a, for&#xE7;a, credibilidade e profissionalismo. A cor mais utilizada em projeto de UI e UX, est&#xE1; carregada de um senso de inova&#xE7;&#xE3;o e seguran&#xE7;a.</p>
+<h5 class="mume-header" id="roxo">Roxo:</h5>
+
+<p>Imagina&#xE7;&#xE3;o, sabedoria, realeza e misticismo. O roxo &#xE9; empolgante, ao mesmo tempo em que acalma a mente e os nervos, encoraja a cria&#xE7;&#xE3;o e inspira.</p>
+<h5 class="mume-header" id="rosa">Rosa:</h5>
+
+<p>Romantismo, divers&#xE3;o e jovialidade. Esse tom excitante pode aumentar a press&#xE3;o sangu&#xED;nea, a respira&#xE7;&#xE3;o, a pulsa&#xE7;&#xE3;o e os batimentos card&#xED;acos. Estimula a energia, a&#xE7;&#xE3;o e confian&#xE7;a.</p>
+<h5 class="mume-header" id="vermelho">Vermelho:</h5>
+
+<p>Coragem, foco, excita&#xE7;&#xE3;o e energia. Assim como o rosa, o vermelho tamb&#xE9;m altera propriedades f&#xED;sicas de nosso corpo, desde a press&#xE3;o sangu&#xED;nea at&#xE9; os batimentos card&#xED;acos. Por estimular a a&#xE7;&#xE3;o e a confian&#xE7;a, essa cor &#xE9; muito utilizada em promo&#xE7;&#xF5;es.</p>
+<h5 class="mume-header" id="laranja">Laranja:</h5>
+
+<p>Alegria, confian&#xE7;a e agressividade. Essa cor estimula a atividade, o apetite e a socializa&#xE7;&#xE3;o. Uma escolha divertida, cheia de calor e energia.</p>
+<h5 class="mume-header" id="branco">Branco:</h5>
+
+<p>Pureza, neutralidade e limpeza. O branco simboliza novos come&#xE7;os, encoraja a organiza&#xE7;&#xE3;o e auxilia na clareza mental.</p>
+<h5 class="mume-header" id="preto">Preto:</h5>
+
+<p>Autoridade, poder e suavidade. A falta de cor representa o vazio e evoca o mist&#xE9;rio.</p>
+<hr>
+<h2 class="mume-header" id="3-cores-em-elementos-de-texto">3. Cores em elementos de texto.</h2>
+
+<p>A cor de um texto &#xE9; t&#xE3;o fr&#xE1;gil como um elemento em uma pintura: pode criar uma mais ampla e mais rica harmonia ou se apresentar bruto e perturbar o delicado equil&#xED;brio de sua p&#xE1;gina. Elementos como o contraste, harmonia, branding, normas culturais e padr&#xF5;es de web devem seguir um esquema de cores previamente definidos por um especialista da &#xE1;rea, como um UI/UX designer.</p>
+<hr>
+<h2 class="mume-header" id="4-cores-em-elementos-de-fundo-background">4. Cores em elementos de fundo (background).</h2>
+
+<p>Para adicionar imagens como fundo no HTML basta escrever:</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>CorQueDesejaAdicionar<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">background-color</span><span class="token punctuation">:</span><span class="token color">black</span><span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- Exemplo --&gt;</span>
+</pre><p>Perceba que &#xE9; necess&#xE1;rio o uso da tag style para poder acessar os estilos de uma tag HTML, dentro, &#xE9; utilizada a linguagem CSS para estilizar, esses estilos podem ser colocados em um arquivo css exterro ao HTML.</p>
+<hr>
+<h2 class="mume-header" id="5-tipos-de-extens%C3%B5es-para-manipula%C3%A7%C3%A3o-de-imagens">5. Tipos de extens&#xF5;es para manipula&#xE7;&#xE3;o de imagens.</h2>
+
+<p>Existem diveros tipos de imagem que podem ser utilizados<br>
+Os mais comuns s&#xE3;o JPEG, PNG, BMP e GIF.<br>
+Mas existem outras extens&#xF5;es de arquivos que s&#xE3;o mais usadas como o SVG ou o TIFF.v</p>
+<p>Cada uma delas servem para um prop&#xF3;sito espec&#xED;fico, mas o que todas elas tem em comum &#xE9; o prop&#xF3;sito de servir a um prop&#xF3;sito est&#xE9;tico e/ou comunicar ideias visualmente.</p>
+<p>Os formatos comuns e seus usos podem ser encontrados em: <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types">https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types</a></p>
+<p>Mas as principais s&#xE3;o:</p>
+<ol>
+<li>JPG</li>
+<li>GIF</li>
+<li>PNG</li>
+</ol>
+<h4 class="mume-header" id="1-jpg">1. JPG</h4>
+
+<p>&#xC9; um formato de arquivo feito para de forma eficiente, armazenar imagens realistas e arte (cor e escala de cinza).</p>
+<p>No entanto, o JPG n&#xE3;o &#xE9; capaz de salvar imagens transparentes, se isso &#xE9; necess&#xE1;rio, &#xE9; preciso usar outro formato de imagem.</p>
+<p>Quando voc&#xEA; salvar imagens nesse formato, voc&#xEA; pode escolher o n&#xED;vel de compress&#xE3;o para balancear o tamanho do arquivo e qualidade.</p>
+<h4 class="mume-header" id="2-gif">2. GIF</h4>
+
+<p>&#xC9; muito utilizado quando for necess&#xE1;rio o uso de imagens e anima&#xE7;&#xF5;es simples na internet, cada arquivo tem suporte a 8 bits por pixel e contem 256 cores indexadas.</p>
+<p>&#xC9; o tipo ideal para imagens com cores planas, sem o uso de gradiente e sem bordas arredondadas, &#xE9; muito utilizado em Logomarcas e ilustra&#xE7;&#xF5;es.</p>
+<p>Ele tem suporte a transpar&#xEA;ncia.</p>
+<h4 class="mume-header" id="3-png">3. PNG</h4>
+
+<p>O PNG &#xE9; um formato criado para substituir o GIF, ele suporta mais cores e mantem o fundo trasparente e capacidade de compress&#xE3;o.</p>
+<p>Ele &#xE9; amplamente usado na Web e seu grande diferencial &#xE9; o poder de compress&#xE3;o, que consegue gerar qualidades de alta qualidade e tamanho razo&#xE1;vel para os padr&#xF5;es atuais da <internet class></internet></p>
+<hr>
+<h2 class="mume-header" id="6-imagens-como-elemento">6. Imagens como elemento.</h2>
+
+<p>Para adicionar imagens como elemento no HTML basta escrever:</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>nomedafoto.extensao<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Texto alternado para Imagem<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>batata.jpg<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Batata<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- Exemplo --&gt;</span>
+</pre><hr>
+<h2 class="mume-header" id="7-imagens-em-elementos-de-fundo-background">7. Imagens em elementos de fundo (background).</h2>
+
+<p>Para adicionar imagens como fundo no HTML basta escrever:</p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&apos;nomedafoto.extensao&apos;</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">&apos;batata.png&apos;</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- Exemplo --&gt;</span>
+</pre><p>Perceba que &#xE9; necess&#xE1;rio o uso da tag style para poder acessar os estilos de uma tag HTML, dentro, &#xE9; utilizada a linguagem CSS para estilizar, esses estilos podem ser colocados em um arquivo css externo ao HTML.</p>
+<hr>
+<h2 class="mume-header" id="8-videos">8. Videos</h2>
+
+<p>Para mostrar um video em HTML, use a tag <code>&lt;video&gt;</code></p>
+<pre data-role="codeBlock" data-info="html" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>largura<span class="token punctuation">&quot;</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>altura<span class="token punctuation">&quot;</span></span> <span class="token attr-name">controls</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>nomedovideo.extensao<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>video/extensao<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>nomedovideo.extensao2<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>video/extensao2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+Your browser does not support the video tag.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Exemplo: --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>320<span class="token punctuation">&quot;</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>240<span class="token punctuation">&quot;</span></span> <span class="token attr-name">controls</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>batata.mp4<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>video/mp4<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>batata.ogg<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>video/ogg<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+Your browser does not support the video tag.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
+
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
