@@ -10,7 +10,7 @@ public class Pizza {
 	public static Map <String, Integer> mapaIngredientes = new HashMap <String, Integer> ();
 	
 	
-	// Método para retornar ingredientes. Necessário para checagem da classe
+	// Mï¿½todo para retornar ingredientes. Necessï¿½rio para checagem da classe
 	// CarrinhoDeCompras se um objeto Pizza tem ingredientes.
 	public ArrayList<String> getIngrediente()
 	{
