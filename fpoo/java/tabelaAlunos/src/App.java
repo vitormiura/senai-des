@@ -4,11 +4,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class App extends  JFrame {
+public class App extends JFrame {
     DefaultTableModel model;
 
     public App() {
-        super("Relatório");
+        super("Relatorio");
 
         Container painel = new JPanel();
         painel.setPreferredSize(new Dimension(150, 100));

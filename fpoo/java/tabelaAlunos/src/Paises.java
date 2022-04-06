@@ -7,7 +7,7 @@ public class Paises extends JFrame {
     }
 
     public Paises() {
-        super("Lista de Países");
+        super("Lista de Paises");
 
         Container painel = new JPanel();
         Container conteudo = getContentPane();
