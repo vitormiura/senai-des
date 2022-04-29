@@ -1,0 +1,12 @@
+.bemvindo{
+    font-size: 150px;
+    color: violet;
+}
+#foto{
+    width: 500px;
+    height: 500px;
+}
+#foto img{
+    width: 100%;
+    height: 100%;
+}
