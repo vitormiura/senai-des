@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from misc import *
+from style import *
 
 """
     Highly experimental demo of how the illusion of a window with a background image is possible with PySimpleGUI.
