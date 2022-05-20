@@ -49,9 +49,9 @@ onValue(dbRef, (snapshot) => {
         console.log(childSnapshot.val().mensagem);
 
         if (nomeUsuario == childSnapshot.val().nome) {
-            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour">' + childSnapshot.val().horario + '</div></div></div></div>'
+            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"><p> Enviado as ' + childSnapshot.val().horario + '</div></div></div></div></p>'
         } else {
-            meuhtml += '<div class="bo"><div class="outros"><div class="hoho"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour">' + childSnapshot.val().horario + '</div></div></div></div>'
+            meuhtml += '<div class="bo"><div class="outros"><div class="hoho"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"<p> Enviado as ' + childSnapshot.val().horario + '</div></div></div></div></p>'
         }
 
         //meuhtml += '<div class="msg"><b>' + childSnapshot.val().nome +  '</i></b><span>' + childSnapshot.val().mensagem + '</span></div>';
