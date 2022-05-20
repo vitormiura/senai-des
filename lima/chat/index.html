@@ -5,25 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/styles.scss">
+    <link rel="stylesheet" href="css/style.css">
     <title>zapzap 2.0</title>
-    <script src="teste.js"></script>
     <script type="module" src="js/chat.js" defer> </script>
 </head>
 
 <body>
+    <header>
+        <h1>Firebase Web Chat</h1>
+    </header>
     <div id="chat">
-        <div class="chat-title">
-            <h1>Chatzinho dos crias</h1>
-            <h2>Senai</h2>
-            <figure class="avatar">
-              <img src="https://p7.hiclipart.com/preview/349/273/275/livechat-online-chat-computer-icons-chat-room-web-chat-others.jpg" /></figure>
-        </div>
-        <div id="conteudo"></div>
+        <div class="cont" id="conteudo"></div>
     </div>
-    <input type="text" placeholder="Digite sua mensagem" id="msg" />
-
-    <div id="bg"></div>
+    <footer>
+        <input type="text" placeholder="Digite sua mensagem" id="msg" class="txtbox" />
+        <input type="submit" value="Enviar" class="botao" id="butao" />
+    </footer>
 </body>
 
 </html>

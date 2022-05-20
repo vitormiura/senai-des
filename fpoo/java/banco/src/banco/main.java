@@ -44,13 +44,13 @@ public class main {
 						JOptionPane.INFORMATION_MESSAGE));
 				switch (opcao) {
 				case 1: {
-					JOptionPane.showMessageDialog(null, "seu saldo é:" + saldo, "saldo",
+					JOptionPane.showMessageDialog(null, "seu saldo ï¿½:" + saldo, "saldo",
 							JOptionPane.INFORMATION_MESSAGE);
 				}
 					break;
 				case 2: {
 					valor = Float.parseFloat(JOptionPane.showInputDialog(null,
-							"Seu saldo é: R$" + saldo + "\nDigite o valor a ser sacado:", "Sua conta",
+							"Seu saldo ï¿½: R$" + saldo + "\nDigite o valor a ser sacado:", "Sua conta",
 							JOptionPane.INFORMATION_MESSAGE));
 					if (valor > saldo) {
 						JOptionPane.showMessageDialog(null, "Saldo Insuficiente!", "Erro!", JOptionPane.ERROR_MESSAGE);
@@ -62,8 +62,7 @@ public class main {
 					}
 					break;
 				case 3:{
-					deposito = Float.parseFloat(JOptionPane.showInputDialog(null,
-							"Deposito: R$" + deposito, "\nDigite o valor a ser Depositado:", "Sua conta",
+					deposito = Float.parseFloat(JOptionPane.showInputDialog(null, "Deposito: R$" + deposito + "\nDigite o valor a ser Depositado:" , "Sua conta",
 							JOptionPane.INFORMATION_MESSAGE));
 					} 
 					break;
