@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(29, 134, 156, 1) 100%);
+}
+
+b {
+    display: block;
+    text-transform: uppercase;
+    margin: 6px 0;
+}
+
+span {
+    font-size: 15px;
+}
+
+#msg {
+    padding: 10px;
+}
+
+#conteudo {
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: scroll;
+    background-color: #301934;
+}
+
+.msg {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 6px 0;
+    display: block;
+}
+
+.msg b {
+    display: block;
+}
+
+.cont {
+    margin: auto;
+    width: 80rem;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+}
+
+.inputs {
+    margin: auto;
+    max-width: 80rem;
+    margin-top: 1rem;
+}
+
+header {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.txtbox {
+    width: 50%;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.botao {
+    text-align: center;
+    width: 7%;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    color: black;
+}
+
+.botao:hover {
+    background: #949494;
+    color: #174ea6;
+}
+
+.eu {
+    display: flex;
+    margin: 7px 10px;
+    border-radius: 5px;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+
+.outros {
+    display: flex;
+    margin: 7px 10px;
+    text-align: left;
+    border-radius: 5px;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    align-content: flex-start;
+    flex: 1;
+}
+
+.hoho {
+    background: #f7f7f7;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+.self {
+    background: #22cc92;
+    color: #fff;
+}
+
+.bo {
+    display: block;
+    padding: 6px 0;
+}
+
+.hour {
+    margin-top: 15px;
+    font-size: small;
+    color: gray;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

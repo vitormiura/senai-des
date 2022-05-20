@@ -1,0 +1,19 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "description": "chat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitormiura/realtime-chat.git"
+  },
+  "author": "vitormiura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitormiura/realtime-chat/issues"
+  },
+  "homepage": "https://github.com/vitormiura/realtime-chat#readme"
+}
