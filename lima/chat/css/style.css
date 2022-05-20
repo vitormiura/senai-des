@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-body{
+
+* {
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    padding: 0;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
     background: url("https://images.hdqwalls.com/download/peaceful-blur-background-1x-1920x1080.jpg") no-repeat 0 0;
-    height: 100%;
+    display: flex;
+    background-color: #2E3440;
 }
 
 b {
@@ -31,13 +41,11 @@ span {
 }
 .cont{
     width: 80rem;
-    margin: auto;
     background-color: whitesmoke;
     border-radius: 1rem;
 }
 footer{
     max-width: 80rem;
-    margin: auto;
     margin-top: 1rem;
 }
 header{
@@ -58,22 +66,10 @@ header{
     padding: 0.5rem 1.5rem;
     border-radius: 1rem;
     border: none;
+    color: white;
 }
 
 .botao:hover {
-  background: #F6F9FE;
-  color: #174ea6;
+    background: #000000;
+    color: #174ea6;
 }
-
-.botao:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.botao:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-
-  
