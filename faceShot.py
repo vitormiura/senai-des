@@ -1,6 +1,6 @@
 import cv2
 
-name = 'Miura' 
+name = str(input("Digite o nome da pessoa: "))
 
 cam = cv2.VideoCapture(0)
 
