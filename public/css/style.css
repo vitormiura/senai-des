@@ -10,9 +10,11 @@
 body {
     /* background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(29, 134, 156, 1) 100%); */
-    background-image: url("https://www.wallpaperflare.com/static/181/148/968/monkey-blurred-cold-animals-wallpaper.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("https://www.wallpaperflare.com/static/181/148/968/monkey-blurred-cold-animals-wallpaper.jpg"); */
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 62%, rgba(26,168,196,1) 100%); 
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 b {
@@ -80,7 +82,6 @@ header {
 
 .botao {
     text-align: center;
-    width: 7%;
     outline: none;
     padding: 0.5rem 1.5rem;
     border-radius: 1rem;
@@ -162,5 +163,310 @@ header {
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(45deg, #00aeff, #a68eff);
     border-radius: 10px;
-    -webkit-box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+    box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .inputs {
+        margin: auto;   
+        max-width: 25rem;
+        margin-top: 0.5rem;
+        background-color: #301934;
+        padding: 10px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .cont {
+        margin: auto;
+        width: 25rem;
+        background-color: whitesmoke;
+        border-radius: 1rem;
+    }
+    #conteudo {
+        padding: 10px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: #301934;
+        scroll-behavior: smooth;
+    }
+    .txtbox {
+        width: 85%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .botao {
+        text-align: center;
+        outline: none;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        border: none;
+        color: black;
+    }
+    
+    .botao:hover {
+        background: #949494;
+        color: #174ea6;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 600px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .inputs {
+        margin: auto;   
+        max-width: 30rem;
+        margin-top: 0.5rem;
+        background-color: #301934;
+        padding: 10px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .cont {
+        margin: auto;
+        width: 30rem;
+        background-color: whitesmoke;
+        border-radius: 1rem;
+    }
+    #conteudo {
+        padding: 10px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: #301934;
+        scroll-behavior: smooth;
+    }
+    .txtbox {
+        width: 85%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .botao {
+        text-align: center;
+        outline: none;
+        padding: 0.5rem 0.7rem;
+        border-radius: 1rem;
+        border: none;
+        color: black;
+    }
+    
+    .botao:hover {
+        background: #949494;
+        color: #174ea6;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 768px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .inputs {
+        margin: auto;   
+        max-width: 40rem;
+        margin-top: 0.5rem;
+        background-color: #301934;
+        padding: 10px;
+        border-radius: 1rem;
+    }
+    .cont {
+        margin: auto;
+        width: 40rem;
+        background-color: whitesmoke;
+        border-radius: 1rem;
+    }
+    #conteudo {
+        padding: 10px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: #301934;
+        scroll-behavior: smooth;
+    }
+    .txtbox {
+        width: 89%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .botao {
+        text-align: center;
+        outline: none;
+        padding: 0.5rem 0.7rem;
+        border-radius: 1rem;
+        border: none;
+        color: black;
+    }
+    
+    .botao:hover {
+        background: #949494;
+        color: #174ea6;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1px;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+} 
+@media only screen and (min-width: 950px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .inputs {
+        margin: auto;   
+        max-width: 50rem;
+        margin-top: 0.5rem;
+        background-color: #301934;
+        padding: 10px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .cont {
+        margin: auto;
+        width: 50rem;
+        background-color: whitesmoke;
+        border-radius: 1rem;
+    }
+    #conteudo {
+        padding: 10px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: #301934;
+        scroll-behavior: smooth;
+    }
+    .txtbox {
+        width: 89%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .botao {
+        text-align: center;
+        outline: none;
+        padding: 0.5rem 1.4rem;
+        border-radius: 1rem;
+        border: none;
+        color: black;
+    }
+    
+    .botao:hover {
+        background: #949494;
+        color: #174ea6;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: whitesmoke;
+    }
+    .inputs {
+        margin: auto;   
+        max-width: 70rem;
+        margin-top: 0.5rem;
+        background-color: #301934;
+        padding: 10px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .cont {
+        margin: auto;
+        width: 70rem;
+        background-color: whitesmoke;
+        border-radius: 1rem;
+    }
+    #conteudo {
+        padding: 10px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        background-color: #301934;
+        scroll-behavior: smooth;
+    }
+    .txtbox {
+        width: 92%;
+        outline: none;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        border: none;
+    }
+    
+    .botao {
+        text-align: center;
+        outline: none;
+        padding: 0.5rem 1.4rem;
+        border-radius: 1rem;
+        border: none;
+        color: black;
+    }
+    
+    .botao:hover {
+        background: #949494;
+        color: #174ea6;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 1px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
 }
