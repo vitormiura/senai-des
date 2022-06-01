@@ -149,7 +149,13 @@ header {
     color: white;
     text-align: center;
 }
-
+img{
+    margin: 0px 0px 0px 10px; 
+    width: auto;  
+}
+.linhazinha{
+    align-items: inherit;
+}
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
@@ -165,7 +171,6 @@ header {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, .12) 0 3px 13px 1px;
 }
-
 
 @media only screen and (max-width: 600px) {
     header {
@@ -433,7 +438,7 @@ header {
     }
     #conteudo {
         padding: 10px;
-        max-height: 80vh;
+        max-height: 75vh;
         overflow-y: scroll;
         background-color: #301934;
         scroll-behavior: smooth;

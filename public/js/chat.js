@@ -48,16 +48,26 @@ onValue(dbRef, (snapshot) => {
         console.log(childSnapshot.val().nome);
         console.log(childSnapshot.val().mensagem);
 
+        let test = "";    
+
         if (nomeUsuario == childSnapshot.val().nome) {
-            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"><p> Enviado as ' + childSnapshot.val().horario + '</div></div></div></div></p>'
+            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><div class="'+test+'"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"><p class="linhazinha"> Enviado as ' + childSnapshot.val().horario + '</span><span id="'+key+'" class="botaoDel"><img src="https://cdn-icons.flaticon.com/png/512/5028/premium/5028066.png?token=exp=1654042503~hmac=e11ba1b4f8068768148649bfb8f60a0a" height ="25" width="25"/></span></div></div></div></div></div></p>' 
+
         } else {
             meuhtml += '<div class="bo"><div class="outros"><div class="hoho"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"<p> Enviado as ' + childSnapshot.val().horario + '</div></div></div></div></p>'
         }
-
-        //meuhtml += '<div class="msg"><b>' + childSnapshot.val().nome +  '</i></b><span>' + childSnapshot.val().mensagem + '</span></div>';
-
     });
     atualizarHTML();
+
+    let delButtons = Array.from(document.querySelectorAll('.botaoDel'))
+
+    delButtons.forEach((botao) => {
+        botao.addEventListener('click', () => {
+            let msgRef = ref(db, `exemplo/${botao.id}`);
+            remove(msgRef);
+
+        });
+    });
 });
 
 function enviarMSG() {
