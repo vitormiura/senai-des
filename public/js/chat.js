@@ -51,7 +51,7 @@ onValue(dbRef, (snapshot) => {
         let test = "";    
 
         if (nomeUsuario == childSnapshot.val().nome) {
-            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><div class="'+test+'"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"><p class="linhazinha"> Enviado as ' + childSnapshot.val().horario + '</span><span id="'+key+'" class="botaoDel"><img src="https://cdn-icons.flaticon.com/png/512/5028/premium/5028066.png?token=exp=1654042503~hmac=e11ba1b4f8068768148649bfb8f60a0a" height ="25" width="25"/></span></div></div></div></div></div></p>' 
+            meuhtml += '<div class="bo"><div class="eu"><div class="hoho self"><div class="'+test+'"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"><p class="linhazinha"> Enviado as ' + childSnapshot.val().horario + '</span><span id="'+key+'" class="botaoDel"><img src="https://freeiconshop.com/wp-content/uploads/edd/trash-flat.png" height ="30" width="30"/></span></div></div></div></div></div></p>' 
 
         } else {
             meuhtml += '<div class="bo"><div class="outros"><div class="hoho"><b>' + childSnapshot.val().nome + '</b><span>' + childSnapshot.val().mensagem + '<span><br><div class="hour"<p> Enviado as ' + childSnapshot.val().horario + '</div></div></div></div></p>'
