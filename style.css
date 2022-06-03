@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Sans Fira', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 body {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +26,35 @@ card {
     border-radius: 0.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+a {
+    color: #434c5e;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#434c5e; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
 .header {
     height: 100%;
+    grid-column: span 2;
+}
+.menu{
+    margin-left: 75vh;
+    margin-top: -45px;
+    font-size: 25px;
+    text-decoration: none;
+}
+.headertext{
+    margin-top: 1rem;
+}
+.description{
+    grid-row: span 2;
 }
 .description p {
-    margin: 0.5rem 0;
+    margin: 1.5rem 0;
+    font-size: 20px;
 }
 .avatar {
     background-image: url("https://media-exp1.licdn.com/dms/image/C4E03AQGLI6Wgh0FSSQ/profile-displayphoto-shrink_800_800/0/1642633035428?e=1658966400&v=beta&t=S2RZzfKIVcYUxlv9a3pOD-s8Ph8o44T_1iV5qG8w-Rs");
@@ -41,13 +66,78 @@ card {
     width: 100%;
 }
 .stack {
-    grid-column: span 2;
+    grid-column: span 1;
 }
 .stack h2 {
     margin-bottom: 1rem;
 }
-.stack devicon {
+.stack icons {
     font-size: 30px;
+}
+.contact {
+    grid-column: span 1;
+}
+.contact a{
+    text-decoration: none;
+}
+.contact h2{
+    margin-bottom: 1rem;
+}
+.contact logos{
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+}
+
+.content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% { 
+        transform: translate3d(85px,0,0);
+    }
 }
 
 @media only screen and (max-width: 800px) {
