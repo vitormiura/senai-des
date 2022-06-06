@@ -1,6 +1,15 @@
 import cv2
+import os
 
 name = str(input("Digite o nome da pessoa: "))
+parent_dir = 'database'
+
+try:
+    path = os.path.join(parent_dir, name)
+    os.mkdir(path)
+    pass
+except IOError:
+    pass
 
 cam = cv2.VideoCapture(0)
 
