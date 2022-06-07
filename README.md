@@ -21,6 +21,6 @@ A functional face recognizer made with Python and libs for image detection. This
     ```pip install imutils```
 &nbsp;
 6. install pyqt5
-    ```pip install ```
+    ```pip install pyqt5```
 &nbsp;
 7. run **`main.py`** and wait the interface open properly.
