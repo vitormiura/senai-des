@@ -20,10 +20,7 @@ A functional face recognizer made with Python and libs for image detection. This
 5. install imutils.
     ```pip install imutils```
 &nbsp;
-6. create a folder in `database` with the respective name you want to recognize.
+6. install pyqt5
+    ```pip install ```
 &nbsp;
-7. run **`faceShot.py`**, type the same name as the folder you created earlier.
-&nbsp;
-8. run **`imageTraining.py`** to encode and serialize all the images.
-&nbsp;
-9. run **`faceDetection.py`** to test if the registered face is being recognized.
+7. run **`main.py`** and wait the interface open properly.
