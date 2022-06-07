@@ -1,13 +1,15 @@
+package front;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Window extends JFrame {
+public class TestWindow extends JFrame {
     DefaultTableModel model;
 
-    public Window() {
+    public TestWindow() {
         super("Estoque Brabo");
 
         Container panel = new JPanel();
@@ -21,20 +23,17 @@ public class Window extends JFrame {
 
         String cols[] = { "ID", "Products", "Price", "Quantity" };
 
-        model = new DefaultTableModel();
+        model = new DefaultTableModel(products, cols);
         JTable table = new JTable(model);
 
-        model.addColumn("ID");
-        model.addColumn("Product");
-        model.addColumn("Price");
-        model.addColumn("Quantity");
+        // model.addRow(new Object[] { "1", "Furadeira", "150.10", "19999" });
 
-        model.addRow(new Object[] { "1", "Furadeira", "150.10", "19999" });
+        table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        JTable row = new JTable(products, cols);
+        // JTable row = new JTable(products, cols);
 
-        row.setDefaultEditor(Object.class, null);
-        row.setBounds(30, 40, 200, 100);
+        // row.setDefaultEditor(Object.class, null);
+        table.setBounds(30, 40, 200, 100);
 
         JScrollPane scrollPainel = new JScrollPane(table);
         panel.add(scrollPainel);
@@ -51,12 +50,33 @@ public class Window extends JFrame {
         JButton rmvButton = new JButton("Remove Product");
         rmvButton.setPreferredSize(new Dimension(150, 50));
 
+        JButton svButton = new JButton("Remove Product");
+        svButton.setPreferredSize(new Dimension(150, 50));
+
         addButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 model.addRow(new Object[] { "", "", "", "" });
             }
         });
+
+        rmvButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (table.getSelectedRow() != -1) {
+                    model.removeRow(table.getSelectedRow());
+                    JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
+                } else {
+                    System.out.println("oi");
+                }
+            }
+        });
         panel.add(addButton);
         panel.add(rmvButton);
+        panel.add(svButton);
+    }
+
+    public static void main(String[] args) {
+        new TestWindow();
     }
 }

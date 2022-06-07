@@ -1,4 +1,6 @@
+package front;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -47,7 +49,7 @@ public class Login extends JFrame {
         public void actionPerformed(ActionEvent e) {
             login.setText("");
             senha.setText("");
-            JOptionPane.showMessageDialog(null, "Dados limpos com Sucesso!");
+            JOptionPane.showMessageDialog(null, "Signup Successfully!");
         }
     }
 }
