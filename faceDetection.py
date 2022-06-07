@@ -67,8 +67,8 @@ def teste():
 		fps.update()
 
 	fps.stop()
-	print("[INFO] elasped time: {:.2f}".format(fps.elapsed()))
-	print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
+	print("Aberto por: {:.2f}".format(fps.elapsed()))
+	print("Média de FPS: {:.2f}".format(fps.fps()))
 
 	cv2.destroyAllWindows()
 	vs.stop()

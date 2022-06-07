@@ -5,8 +5,8 @@ from tkinter import simpledialog
 
 #ROOT = tk.Tk()
 def shot():
-    name = USER_INP = simpledialog.askstring(title="Cadastro",
-                                    prompt="Digite o nome da:")
+    name = simpledialog.askstring(title="Cadastro",
+                                    prompt="Digite o nome do aluno:")
                                     
     parent_dir = 'database'
 
