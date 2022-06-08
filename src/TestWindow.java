@@ -1,51 +1,57 @@
+package src;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.nio.file.*;
+import java.util.ArrayList;
 
 public class TestWindow extends JFrame {
-    String path = "Stock.txt";
+    String file = "src/Stock.txt";
 
-    public TestWindow() {
+    public TestWindow() throws IOException{
         super("Storage Management");
-
         Container panel = new JPanel();
+
         panel.setPreferredSize(new Dimension(300, 300));
 
-        String products[][] = {
-                { "1", "Furadeira", "150.50", "10000" },
-                { "2", "Martelo", "25.45", "240124" },
-                { "3", "Luva", "10", "12321321" }
-        };
+        Path path = Paths.get(file.toString());
+        InputStream input = Files.newInputStream(path);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 
+        String temp = null;
+        String id;
+        String item;
+        String price;
+        String quantity;
+        ArrayList<String[]> tableArr = new ArrayList<>();
+    
+        int aux = 0;
+        while((temp = reader.readLine()) != null){
+            String[] table = temp.split(",");
+            aux += 1;
+            tableArr.add(table);
+        }
 
-        //File file = new File(path);
+        String products[][] = new String[aux][4];
 
-        // try {
-        //     BufferedReader br = new BufferedReader(new FileReader(file));
-        //     Object[] lines = br.lines().toArray();
+        temp = reader.readLine();
+        for(int i = 0; i<tableArr.size(); i++){
+            for(int x = 0; x<aux;x++){
+                int contador = 0;
+                String[] vetorAux = tableArr.get(x);
+                for(int z = 0; z<=3; z++){
+                    if(contador>3){
+                        contador -= 1;
+                    }
+                    products[x][contador] = vetorAux[contador];
+                    contador+=1;
+                }
+            }
+        }
 
-        //     for(int i=0; i<lines.length;i++){
-        //         String line = lines[i].toString().trim();
-        //         String[] dataRow = line.split(",");
-        //         model.addRow(dataRow);
-        //     }
-
-        // } catch (FileNotFoundException e1) {
-        //     e1.printStackTrace();
-        // }
-        
-        // BufferedReader br = new BufferedReader(new FileReader(file));
-        // Object[] lines = br.lines().toArray();
-
-        // for(int i=0; i<lines.length;i++){
-        //     String line = lines[i].toString().trim();
-        //     String[] dataRow = line.split(",");
-        //     products.addRow(dataRow);
-        // }
-
-        //String products[][] = {};
         String cols[] = { "ID", "Products", "Price", "Quantity" };
 
         DefaultTableModel model = new DefaultTableModel(products, cols);
@@ -70,7 +76,7 @@ public class TestWindow extends JFrame {
         JButton rmvButton = new JButton("Remove Product");
         rmvButton.setPreferredSize(new Dimension(150, 50));
 
-        JButton svButton = new JButton("Remove Product");
+        JButton svButton = new JButton("Save Inventory");
         svButton.setPreferredSize(new Dimension(150, 50));
 
         addButton.addActionListener(new ActionListener() {
@@ -87,8 +93,17 @@ public class TestWindow extends JFrame {
                     model.removeRow(table.getSelectedRow());
                     JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
                 } else {
-                    System.out.println("oi");
+                    JOptionPane.showMessageDialog(null, "User not found!",
+                            "Error!", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+
+        svButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String filepath = "src/Stock.txt";
+                File file = new File(filepath);
             }
         });
         panel.add(addButton);
@@ -96,7 +111,7 @@ public class TestWindow extends JFrame {
         panel.add(svButton);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         new TestWindow();
     }
 }
