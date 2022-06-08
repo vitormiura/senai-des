@@ -4,10 +4,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.nio.file.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Window extends JFrame {
     String file = "Stock.txt";
+    LocalDateTime hora = LocalDateTime.now();
 
     public Window() throws IOException{
         super("Storage Management");

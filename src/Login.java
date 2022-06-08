@@ -1,9 +1,9 @@
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.nio.file.*;
+import java.time.LocalDateTime;
 import static java.nio.file.StandardOpenOption.*;
 
 public class Login extends JFrame {
@@ -11,6 +11,7 @@ public class Login extends JFrame {
     JTextField pass;
     JButton ok, cad;
     String file = "Users.txt";
+    LocalDateTime hora = LocalDateTime.now();
 
     public Login() {
         super("Login - Estoque Brabo");
