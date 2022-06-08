@@ -1,5 +1,3 @@
-package src;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -8,10 +6,10 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.ArrayList;
 
-public class TestWindow extends JFrame {
-    String file = "src/Stock.txt";
+public class Window extends JFrame {
+    String file = "Stock.txt";
 
-    public TestWindow() throws IOException{
+    public Window() throws IOException{
         super("Storage Management");
         Container panel = new JPanel();
 
@@ -22,15 +20,11 @@ public class TestWindow extends JFrame {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 
         String temp = null;
-        String id;
-        String item;
-        String price;
-        String quantity;
         ArrayList<String[]> tableArr = new ArrayList<>();
     
         int aux = 0;
         while((temp = reader.readLine()) != null){
-            String[] table = temp.split(",");
+            String[] table = temp.split(" ");
             aux += 1;
             tableArr.add(table);
         }
@@ -67,7 +61,7 @@ public class TestWindow extends JFrame {
         Container cont = getContentPane();
         cont.add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 600);
+        setSize(600, 620);
         setVisible(true);
 
         JButton addButton = new JButton("New Product");
@@ -102,8 +96,24 @@ public class TestWindow extends JFrame {
         svButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String filepath = "src/Stock.txt";
-                File file = new File(filepath);
+                try{
+                    String filepath = "Stock.txt";
+                    File file = new File(filepath);
+                    FileWriter fw = new FileWriter(file.getAbsoluteFile());
+                    BufferedWriter bw = new BufferedWriter(fw);
+
+                    for(int i = 0; i < table.getRowCount(); i++) {
+                        for(int j = 0; j < table.getColumnCount(); j++) {
+                            bw.write((String)table.getModel().getValueAt(i, j)+" ");
+                        }
+                        bw.write("\n");
+                    }
+                    bw.close();
+                    fw.close();
+                    JOptionPane.showMessageDialog(null, "Inventory saved successfully!");
+                }catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         panel.add(addButton);
@@ -112,6 +122,6 @@ public class TestWindow extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
-        new TestWindow();
+        new Window();
     }
 }
