@@ -1,16 +1,14 @@
-package windows;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.io.*;
 
 public class TestWindow extends JFrame {
-    DefaultTableModel model;
+    String path = "Stock.txt";
 
     public TestWindow() {
-        super("Estoque Brabo");
+        super("Storage Management");
 
         Container panel = new JPanel();
         panel.setPreferredSize(new Dimension(300, 300));
@@ -21,18 +19,40 @@ public class TestWindow extends JFrame {
                 { "3", "Luva", "10", "12321321" }
         };
 
+
+        //File file = new File(path);
+
+        // try {
+        //     BufferedReader br = new BufferedReader(new FileReader(file));
+        //     Object[] lines = br.lines().toArray();
+
+        //     for(int i=0; i<lines.length;i++){
+        //         String line = lines[i].toString().trim();
+        //         String[] dataRow = line.split(",");
+        //         model.addRow(dataRow);
+        //     }
+
+        // } catch (FileNotFoundException e1) {
+        //     e1.printStackTrace();
+        // }
+        
+        // BufferedReader br = new BufferedReader(new FileReader(file));
+        // Object[] lines = br.lines().toArray();
+
+        // for(int i=0; i<lines.length;i++){
+        //     String line = lines[i].toString().trim();
+        //     String[] dataRow = line.split(",");
+        //     products.addRow(dataRow);
+        // }
+
+        //String products[][] = {};
         String cols[] = { "ID", "Products", "Price", "Quantity" };
 
-        model = new DefaultTableModel(products, cols);
+        DefaultTableModel model = new DefaultTableModel(products, cols);
         JTable table = new JTable(model);
-
-        // model.addRow(new Object[] { "1", "Furadeira", "150.10", "19999" });
 
         table.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        // JTable row = new JTable(products, cols);
-
-        // row.setDefaultEditor(Object.class, null);
         table.setBounds(30, 40, 200, 100);
 
         JScrollPane scrollPainel = new JScrollPane(table);

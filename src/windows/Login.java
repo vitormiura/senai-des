@@ -11,7 +11,7 @@ public class Login extends JFrame {
     JTextField login;
     JTextField pass;
     JButton ok, cad;
-    String file = "db\\Users.txt";
+    String file = "Users.txt";
 
     public Login() {
         super("Login - Estoque Brabo");
@@ -59,7 +59,7 @@ public class Login extends JFrame {
                 }
                 if(auth == true){
                     new Window();
-                    //this.dispose(); professor nao funcionou de nenhum jeito manda essa janela embora
+                    //this.dispose(); professor nao funcionou de nenhum jeito mandar essa janela embora
                 }else{JOptionPane.showMessageDialog(null, "User not found!",
                 "Error!", JOptionPane.ERROR_MESSAGE);}
             } catch (Exception ex) {
@@ -73,7 +73,7 @@ public class Login extends JFrame {
         public void actionPerformed(ActionEvent e) {
             try {
                 Path path = Paths.get(file.toString());
-                OutputStream output = new BufferedOutputStream(Files.newOutputStream(path, CREATE));
+                OutputStream output = new BufferedOutputStream(Files.newOutputStream(path, APPEND));
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
                 writer.write(login.getText() + "," + pass.getText());
                 writer.newLine();
