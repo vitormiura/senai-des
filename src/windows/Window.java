@@ -1,4 +1,4 @@
-package front;
+package windows;
 
 import java.awt.*;
 import java.awt.event.*;

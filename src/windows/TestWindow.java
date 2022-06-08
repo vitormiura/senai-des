@@ -1,4 +1,4 @@
-package front;
+package windows;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
