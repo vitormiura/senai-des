@@ -14,11 +14,11 @@ def main():
 
 	def send_message(name):
 		return requests.post(
-			"https://api.mailgun.net/v3/sandbox4e4fc893fb854d99ad6f97c55e2c2d82.mailgun.org/messages",
-			auth=("api", "65e9a1d086b9f25d4b9b9a80fce1b4ef-27a562f9-dfd844b2"),
+			"your domain here",
+			auth=("api", "your api here"),
 			files = [("attachment", ("image.jpg", open("image.jpg", "rb").read()))],
-			data={"from": 'grupo1@senai.edu.br',
-				"to": ["vitormiura3@hotmail.com"],
+			data={"from": 'example@example.com',
+				"to": ["example@example.com"],
 				"subject": "Aviso de presença",
 				"html": "<html>" + name + " esteve presente.  </html>"})
 
