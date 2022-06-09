@@ -1,3 +1,4 @@
 1 macaco 40 1500 
-2 anad awdaw awda 
-3 ventura 123123 12313 
+4 martelo 1999 1999 
+5 furadeira 1000 1000 
+3 antonio 15151 1 

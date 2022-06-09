@@ -11,7 +11,7 @@ public class Login extends JFrame {
     JTextField pass;
     JButton ok, cad;
     String file = "Users.txt";
-    LocalDateTime hora = LocalDateTime.now();
+    LocalDateTime hour = LocalDateTime.now();
 
     public Login() {
         super("Login - Estoque Brabo");
@@ -55,10 +55,12 @@ public class Login extends JFrame {
 
                     if(user.equals(login.getText()) && password.equals(pass.getText())){
                         auth = true;
+                        Log.log("["+ hour + "] " + login.getText() +" logged in.");
                     }
                 }
                 if(auth == true){
                     new Window();
+                    Log.log("["+ hour + "] " + login.getText() +" initialized inventory program.");
                     //this.dispose(); professor nao funcionou de nenhum jeito mandar essa janela embora
                 }else{JOptionPane.showMessageDialog(null, "User not found!",
                 "Error!", JOptionPane.ERROR_MESSAGE);}
@@ -78,6 +80,7 @@ public class Login extends JFrame {
                 writer.write(login.getText() + "," + pass.getText());
                 writer.newLine();
                 JOptionPane.showMessageDialog(null, "Signup Successfully!");
+                Log.log("["+ hour + "] " + login.getText() + " signed up.");
                 writer.close();
                 output.close(); 
             } catch (Exception ex) {

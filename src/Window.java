@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Window extends JFrame {
     String file = "Stock.txt";
-    LocalDateTime hora = LocalDateTime.now();
+    LocalDateTime hour = LocalDateTime.now();
 
     public Window() throws IOException{
         super("Storage Management");
@@ -63,7 +63,7 @@ public class Window extends JFrame {
         Container cont = getContentPane();
         cont.add(panel);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 620);
+        setSize(600, 550);
         setVisible(true);
 
         JButton addButton = new JButton("New Product");
@@ -79,6 +79,11 @@ public class Window extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 model.addRow(new Object[] { "", "", "", "" });
+                try {
+                    Log.log("["+ hour + "]" + " product add.");
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
 
@@ -88,8 +93,13 @@ public class Window extends JFrame {
                 if (table.getSelectedRow() != -1) {
                     model.removeRow(table.getSelectedRow());
                     JOptionPane.showMessageDialog(null, "Selected row deleted successfully");
+                    try {
+                        Log.log("["+ hour + "]" + " product delete.");
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(null, "User not found!",
+                    JOptionPane.showMessageDialog(null, "Select a row first!",
                             "Error!", JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -113,6 +123,7 @@ public class Window extends JFrame {
                     bw.close();
                     fw.close();
                     JOptionPane.showMessageDialog(null, "Inventory saved successfully!");
+                    Log.log("["+ hour + "]" + " inventory status save.");
                 }catch (Exception ex) {
                     ex.printStackTrace();
                 }
