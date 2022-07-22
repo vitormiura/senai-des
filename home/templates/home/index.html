@@ -8,5 +8,17 @@
 </head>
 <body>
     <img src="https://c.tenor.com/Pni1r5CHRuMAAAAC/beijo-do-macaco-macaco.gif" alt="">
+    <h1>agendinha dos cria:</h1>
+    <ul>
+    {% for d in agenda %}
+        <li>ID: {{d.id}}</li>
+        <li>Name: {{d.name}}</li>
+        <li>Description: {{d.description}}</li>
+        <li>Is active? {{d.teste}}</li>
+        <li>email: {{d.email}}</li>
+        <hr>
+    {% endfor %}
+    </ul>
+    
 </body>
 </html>
