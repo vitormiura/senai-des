@@ -1,15 +1,21 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+{% include 'header.html' %}
 <body>
+    <div class="menuzin">
+        {% include 'menu.html' %}
+        {% if user.is_authenticated %} 
+        <div class="logado">
+            <a href="">dashboard</a>
+            <a href="">cadastrar</a>
+        </div>
+        {% else %}
+        <div>
+            <a href="">login</a>
+        </div>
+        {% endif %}   
+    </div>
     <h1>Home</h1>
+    <img src="https://c.tenor.com/6a6N6IW-OGsAAAAd/monkey-swimming.gif" alt="monke" height="150" width="150">
     <ul>
     {% for monke in curso %}
         <a href="{% url 'homedetalhes' monke.id %}"><li>ID: {{monke.id}}</li></a>
