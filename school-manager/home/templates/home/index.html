@@ -8,5 +8,14 @@
 </head>
 <body>
     <h1>Home</h1>
+    <ul>
+    {% for monke in curso %}
+        <a href="{% url 'homedetalhes' monke.id %}"><li>ID: {{monke.id}}</li></a>
+        <li>Name: {{monke.nome}}</li>
+        <li>Phone: {{monke.phone}}</li>
+        <li>Active: {{monke.active}}</li>
+        <hr>
+    {% endfor %}
+</ul>
 </body>
 </html>
