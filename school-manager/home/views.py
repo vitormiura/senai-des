@@ -54,5 +54,5 @@ def salvar_curso(request):
 
         data.save()
 
-        #return redirect('homeindex.html')
-        return render(request, 'home/index.html')
+        return redirect('homeindex')
+        #return render(request, 'home/index.html')

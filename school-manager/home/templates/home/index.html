@@ -5,6 +5,7 @@
         {% include 'menu.html' %}
         {% if user.is_authenticated %} 
         <div class="logado">
+            Hi, {{user.get_username}}
             <a href="">dashboard</a>
             <a href="{% url 'salvar_curso' %}">cadastrar</a>
         </div>
