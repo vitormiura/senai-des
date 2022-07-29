@@ -1,0 +1,30 @@
+{% load static %}
+{% include 'header.html' %}
+<body>
+    <div class="menuzin">
+        {% include 'menu.html' %}
+        {% if user.is_authenticated %} 
+        <div class="logado">
+            <a href="">dashboard</a>
+            <a href="{% url 'salvar_curso' %}">cadastrar</a>
+        </div>
+        {% else %}
+        <div>
+            <a href="">login</a>
+        </div>
+        {% endif %}   
+    </div>
+    <h1>Cadastro</h1>
+    <!-- <form action="{% url 'salvar_curso' %}" method="post" enctype="multipart/form-data"> -->
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Course name">
+        <input type="text" name="descriptions" placeholder="Course description">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="text" name="active" placeholder="1 or 0">
+        <input type="number" name="price" placeholder="Course price">
+        <input type="file" name="image" id="">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
