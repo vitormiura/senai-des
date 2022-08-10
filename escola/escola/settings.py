@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # apps
     'home',
+    'aluno',
     #dependencies
     'bootstrap5',
     'rest_framework',
