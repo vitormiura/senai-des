@@ -4,4 +4,3 @@ from zlib import decompressobj
 
 from django import forms
 
-class

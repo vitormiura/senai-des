@@ -3,5 +3,22 @@
 {% block 'titulo' %} Home {% endblock %}
 
 {% block 'conteudo' %} 
+
     <h2>Lista de aluno</h2>
+    <table class = 'table'>
+        <thead>
+            <td>Nome</td>
+            <td>telefone</td>
+            <td colspan="2">opcoes</td>
+        </thead>
+    </table>
+    <tr>
+        {% for aluno in alunos %}
+            <td>{{aluno.nome}}</td>
+            <td>{{aluno.telefone}}</td>
+            <td><a href="" class="btn btn-primary">Editar</a></td>
+            <td><a href="" class="btn btn-danger">Deletar</a></td>
+        {% endfor %}
+    </tr>
+
 {% endblock %}
