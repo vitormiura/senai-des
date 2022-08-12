@@ -1,0 +1,22 @@
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block 'titulo' %} {% endblock %}</title>
+</head>
+<body>
+{% bootstrap_css %}
+<nav  >
+    <a href="">home</a>
+    <a href="{% url 'aluno_index' %}">aluno</a>
+    <a href="{% url 'aluno_cadastro' %}">cadastrar aluno</a>
+    <a href="">login</a>
+</nav>
+<div class="container" >
+{% block 'conteudo' %}
+
+{% endblock %}
+</div>
+</body>
+</html>
