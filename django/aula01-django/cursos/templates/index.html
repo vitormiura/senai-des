@@ -73,7 +73,7 @@
                     <nav class="classy-navbar justify-content-between" id="coursesNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a class="nav-brand" href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -91,8 +91,8 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="curso.html">Cursos</a></li>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'curso' %}">Cursos</a></li>
                                 </ul>
 
                                 <!-- Formulario de busca -->
@@ -119,7 +119,7 @@
                     <div class="single-course-area mb-30">
                         <img src="{% static 'img/bg-img/foto_aprendiz.png' %}" alt="">
                         <div class="course-content">
-                            <a href="curso.html">
+                            <a href="{% url 'curso' %}">
                                 <h5>Smart Automation</h5>
                             </a>
                         </div>
@@ -130,7 +130,7 @@
                     <div class="single-course-area mb-30">
                         <img src="{% static 'img/bg-img/foto_aprendiz.png' %}" alt="">
                         <div class="course-content">
-                            <a href="curso.html">
+                            <a href="{% url 'curso' %}">
                                 <h5>Mecatrônica</h5>
                             </a>
                         </div>
@@ -154,7 +154,7 @@
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>
