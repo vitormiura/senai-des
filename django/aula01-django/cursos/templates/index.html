@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
         <title>Cursos ETS</title>
     
         <!-- Stylesheet -->
-        <link rel="stylesheet" href='site.css'>
+        <link rel="stylesheet" href="{% static 'site.css' %}">
     
     </head>
 
@@ -72,7 +73,7 @@
                     <nav class="classy-navbar justify-content-between" id="coursesNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand" href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -116,7 +117,7 @@
         <div class="row">
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-course-area mb-30">
-                        <img src="img/bg-img/foto_aprendiz.png" alt="">
+                        <img src="{% static 'img/bg-img/foto_aprendiz.png' %}" alt="">
                         <div class="course-content">
                             <a href="curso.html">
                                 <h5>Smart Automation</h5>
@@ -127,7 +128,7 @@
 
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-course-area mb-30">
-                        <img src="img/bg-img/foto_aprendiz.png" alt="">
+                        <img src="{% static 'img/bg-img/foto_aprendiz.png' %}" alt="">
                         <div class="course-content">
                             <a href="curso.html">
                                 <h5>Mecatrônica</h5>
@@ -153,7 +154,7 @@
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -163,15 +164,15 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="{% static 'js/active.js' %}"></script>
 </body>
 
 </html>

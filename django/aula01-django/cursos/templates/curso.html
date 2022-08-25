@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
         <title>Cursos ETS</title>
     
         <!-- Stylesheet -->
-        <link rel="stylesheet" href='site.css'>
+        <link rel="stylesheet" href="{% static 'site.css' %}">
     
     </head>
 
@@ -135,7 +136,7 @@
             <div class="row">
                 <div class="col-12">
                     <!--<div class="course-slider owl-carousel">-->
-                        <img src='img/bg-img/ets_banner.jpg'>
+                        <img src="{% static 'img/bg-img/ets_banner.jpg' %}">
                     </div>
                 </div>
             </div>
@@ -189,7 +190,7 @@
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.html"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -199,15 +200,15 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="{% static 'js/active.js' %}"></script>
 </body>
 
 </html>
