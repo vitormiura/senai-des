@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
     <!-- Search Wrapper -->
     <div class="search-wrapper">
         <!-- Close Btn -->
@@ -73,8 +72,7 @@
                     <nav class="classy-navbar justify-content-between" id="coursesNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}"
-                                alt=""></a>
+                        <a class="nav-brand" href="{% url 'index' %}"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -112,45 +110,10 @@
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Course Area Start ##### -->
-    <section class="course-area">
-        <div class="container">
-            <div class="row">
-                {% for id, curso in nome_cursos.items %}
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-course-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_aprendiz.png' %}" alt="">
-                        <div class="course-content">
-                            <a href="{% url 'curso' %}">
-                                <h5>{{curso}}</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-    <!-- ##### Best Receipe Area End ##### -->
+    {% block content %}
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
-                    <!-- Footer Social Info -->
-                    <div class="footer-social-info text-right">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </div>
-                    <!-- Footer Logo -->
-                    <div class="footer-logo">
-                        <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% endblock %}
+
     <!-- ##### Footer Area Start ##### -->
 
     <!-- ##### All Javascript Files ##### -->
