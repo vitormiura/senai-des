@@ -1,4 +1,3 @@
-from pydoc import locate
 from rest_framework import generics
 from .models import Item, Location
 from .serializer import ItemSerializer, LocationSerializer
