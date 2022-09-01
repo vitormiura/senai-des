@@ -5,7 +5,6 @@ from rest_framework.response import Response
 from .models import Produto
 from .serializer import ProdutoSerializer
 from rest_framework import status
-# Create your views here.
 
 @api_view(['GET', 'POST'])
 def produtos_listar(request):
@@ -20,14 +19,23 @@ def produtos_listar(request):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
-            return Response(serializer.erros, status=status.HTTP_400_BAD_REQUEST)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view()
+@api_view(['GET', 'PUT', 'DELETE'])
 def produto_detalhes(request, id):
     # try:
         # produto = Produto.objects.get(pk=id)
     produto = get_object_or_404(Produto, pk=id)
-    serializer = ProdutoSerializer(produto)
-    return Response(serializer.data)
+    if request.method == 'GET':
+        serializer = ProdutoSerializer(produto)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = ProdutoSerializer(produto, data = request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+    elif request.method == 'DELETE':
+        produto.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
     # except Produto.DoesNotExist:
         # return Response(status=status.HTTP_404_NOT_FOUND)
