@@ -2,9 +2,9 @@ from django.shortcuts import get_object_or_404
 #from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Produto
-from .serializer import ProdutoSerializer
-from rest_framework import status
+from .models import Produto, Pedido, PedidoItem, Cliente
+from .serializer import ProdutoSerializer, PedidoSerializer, ClienteSerializer, ItemSerializer
+from rest_framework import status, viewsets
 
 @api_view(['GET', 'POST'])
 def produtos_listar(request):
@@ -39,3 +39,7 @@ def produto_detalhes(request, id):
         return Response(status=status.HTTP_204_NO_CONTENT)
     # except Produto.DoesNotExist:
         # return Response(status=status.HTTP_404_NOT_FOUND)
+
+class pedido(viewsets.ModelViewSet):
+    queryset = Pedido.objects.all()
+    serializer_class = PedidoSerializer
