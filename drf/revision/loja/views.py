@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Produto, Pedido, PedidoItem, Cliente
 from .serializer import ProdutoSerializer, PedidoSerializer, ClienteSerializer, ItemSerializer
-from rest_framework import status, viewsets
+from rest_framework import status, generics
 
 @api_view(['GET', 'POST'])
 def produtos_listar(request):
@@ -40,6 +40,34 @@ def produto_detalhes(request, id):
     # except Produto.DoesNotExist:
         # return Response(status=status.HTTP_404_NOT_FOUND)
 
-class pedido(viewsets.ModelViewSet):
-    queryset = Pedido.objects.all()
+class PedidoList(generics.ListCreateAPIView):
     serializer_class = PedidoSerializer
+
+    def get_queryset(self):
+        queryset = Pedido.objects.all()
+        item = self.request.query_params.get('item')
+        client = self.request.query_params.get('client')
+
+        if item and client is not None:
+            queryset = queryset.filter(items = item, cliente = client)
+        return queryset
+
+class PedidoDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = PedidoSerializer
+    queryset = Pedido.objects.all()
+
+class ClientList(generics.ListCreateAPIView):
+    serializer_class = ClienteSerializer
+    queryset = Cliente.objects.all()
+
+class ClientDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ClienteSerializer
+    queryset = Cliente.objects.all()
+
+class ItemList(generics.ListCreateAPIView):
+    serializer_class = ItemSerializer
+    queryset = PedidoItem.objects.all()
+
+class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ItemSerializer
+    queryset = PedidoItem.objects.all()

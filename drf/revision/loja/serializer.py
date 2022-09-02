@@ -20,10 +20,9 @@ class ClienteSerializer(serializers.ModelSerializer):
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = PedidoItem
-        fields = ("id", "produtos", "quantidade")
+        fields = ("produtos", "quantidade")
 
 class PedidoSerializer(serializers.ModelSerializer):
-    kk = ItemSerializer(many=True, source="kk")
     class Meta:
         model = Pedido
-        fields = ("id", "dt_pedido", "status_pagamento", "kk", "cliente")
+        fields = ('__all__')
