@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Produto, Pedido, PedidoItem, Cliente
+from .models import Aval, Produto, Pedido, PedidoItem, Cliente
 from decimal import Decimal
 
 class ProdutoSerializer(serializers.ModelSerializer):
@@ -25,4 +25,9 @@ class ItemSerializer(serializers.ModelSerializer):
 class PedidoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pedido
+        fields = ('__all__')
+
+class AvalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Aval
         fields = ('__all__')

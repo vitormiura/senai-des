@@ -2,9 +2,9 @@ from django.shortcuts import get_object_or_404
 #from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Produto, Pedido, PedidoItem, Cliente
-from .serializer import ProdutoSerializer, PedidoSerializer, ClienteSerializer, ItemSerializer
-from rest_framework import status, generics
+from .models import Aval, Produto, Pedido, PedidoItem, Cliente
+from .serializer import AvalSerializer, ProdutoSerializer, PedidoSerializer, ClienteSerializer, ItemSerializer
+from rest_framework import status, generics, viewsets
 
 @api_view(['GET', 'POST'])
 def produtos_listar(request):
@@ -39,6 +39,22 @@ def produto_detalhes(request, id):
         return Response(status=status.HTTP_204_NO_CONTENT)
     # except Produto.DoesNotExist:
         # return Response(status=status.HTTP_404_NOT_FOUND)
+
+@api_view(['GET', 'POST'])
+def aval_list(request):
+    if request.method == 'GET':
+        queryset = Aval.objects.all()
+        serializer = AvalSerializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == 'POST':
+        serializer = AvalSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class avaliacaoVs(viewsets.ModelViewSet):
+    queryset = Aval.objects.all()
+    serializer_class = AvalSerializer
 
 class PedidoList(generics.ListCreateAPIView):
     serializer_class = PedidoSerializer

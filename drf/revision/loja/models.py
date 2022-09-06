@@ -48,3 +48,10 @@ class Pedido(models.Model):
 
     def __str__(self) -> str:
         return str(self.id)   
+
+class Aval(models.Model):
+    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    descricao = models.TextField()
+    dt_aval = models.DateField(auto_now_add=True)
+    stars = models.PositiveSmallIntegerField()
