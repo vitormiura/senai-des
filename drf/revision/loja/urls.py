@@ -4,7 +4,11 @@ from rest_framework.routers import DefaultRouter
 from xml.etree.ElementInclude import include
 
 router = DefaultRouter()
-router.register('test', views.avaliacaoVs, basename='avaliacoes')
+router.register('aval', views.aval_list, basename='avals')
+router.register('produtos', views.produtos, basename='prods')
+router.register('pedido', views.Pedido, basename='pedido')
+router.register('cliente', views.Cliente, basename='cliente')
+router.register('item', views.Item, basename='cliente')
 
 # urlpatterns = [
 #     path('produtos/', views.produtos_listar),
