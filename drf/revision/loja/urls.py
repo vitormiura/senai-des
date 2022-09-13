@@ -14,7 +14,6 @@ router.register('item', views.Item, basename='cliente')
 #     path('produtos/', views.produtos_listar),
 #     path('produtos/<int:id>/', views.produto_detalhes),
 #     path('clientes/', views.ClientList.as_view()),
-#     path('clientes/', views.ClientList.as_view()),
 #     path('clientes/<int:pk>', views.ClientDetail.as_view()),
 #     path('pedidos/', views.PedidoList.as_view()),
 #     path('pedidos/<int:pk>', views.PedidoDetail.as_view()),

@@ -1,3 +1,4 @@
+from urllib import response
 from django.shortcuts import get_object_or_404
 #from django.http import HttpResponse
 from rest_framework.decorators import api_view
@@ -20,6 +21,30 @@ from rest_framework import status, generics, viewsets
 #             return Response(serializer.data, status=status.HTTP_201_CREATED)
 #         else:
 #             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ProdutoDetalhes(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
+
+    def update(self, request, *args, **kwargs):
+        if request.data['preco'] > 0 or request.data['preco'] < 100:
+            return Response({"error": "preco deve ser entre 0 e 100"})
+        return super().update(request, *args, **kwargs)
+
+    def delete(self, request, pk):
+        produto = get_object_or_404(Produto, pk = pk)
+        if produto.qtd_estoque > 0:
+            return Response({"error" : "so delete em produtos sem estoque"})
+        produto.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class ProdutoListar(generics.ListCreateAPIView):
+    queryset = Produto.objects.all()
+    serializer_class = ProdutoSerializer
+    def create(self, request, *args, **kwargs):
+        if float(request.data['preco']) > 0 or float(request.data['preco'] < 100):
+            return Response({"error": "preco deve ser entre 0 e 100"})
+        return super().create(request, *args, **kwargs)
 
 class produtos(viewsets.ModelViewSet):
     queryset = Produto.objects.all()

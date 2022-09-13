@@ -10,6 +10,16 @@ class ProdutoSerializer(serializers.ModelSerializer):
     #10% de acréscimo
     preco_taxado = serializers.SerializerMethodField(method_name='calcular_taxa')
 
+    def create(self, validated_data):
+        if self.validated_data['qtd_estoque'] < 0:
+            validated_data['qtd_estoque'] = 0
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        if self.validated_data['qtd_estoque'] < 0:
+            validated_data['qtd_estoque'] = 0
+        return super().update(instance, validated_data)
+
     def calcular_taxa(self, produto : Produto):
         return produto.preco * Decimal(1.1)
 
