@@ -1,14 +1,24 @@
-from django.urls import path
+from cgitb import lookup
+from posixpath import basename
+from django.urls import path, include
 from . import views
-from rest_framework.routers import DefaultRouter
-from xml.etree.ElementInclude import include
+# from rest_framework.routers import DefaultRouter
+from rest_framework_nested import routers
 
-router = DefaultRouter()
-router.register('aval', views.aval_list, basename='avals')
-router.register('produtos', views.produtos, basename='prods')
-router.register('pedido', views.Pedido, basename='pedido')
-router.register('cliente', views.Cliente, basename='cliente')
-router.register('item', views.Item, basename='cliente')
+router = routers.DefaultRouter()
+
+router.register('produtos', views.Produtos, basename='produtos')
+router.register('avaliacoes', views.aval_list, basename='avaliacoes')
+# router.register('pedido', views.Pedido, basename='pedido')
+# router.register('cliente', views.Cliente, basename='cliente')
+# router.register('item', views.Item, basename='item')
+# router.register('item', views.Item, basename='item')
+router.register('categoria', views.Categoria, basename='categoria')
+
+produto_router = routers.NestedDefaultRouter(router, 'produtos', lookup='produtos')
+produto_router.register('avaliacoes', views.aval_list, basename='avaliacoes')
+
+urlpatterns = router.urls + produto_router.urls
 
 # urlpatterns = [
 #     path('produtos/', views.produtos_listar),
@@ -23,4 +33,8 @@ router.register('item', views.Item, basename='cliente')
 #     path('avalsvs/', views.aval_list),
 # ]
 
-urlpatterns = router.urls
+# urlpatterns = router.urls
+
+# urlpatterns = [
+#     path('', include(router.urls))
+# ]
