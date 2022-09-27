@@ -19,6 +19,7 @@ class Produto(models.Model):
 class Cliente(models.Model):
     nome = models.CharField(max_length=255)
     cpf = models.CharField(max_length=15)
+    img = models.ImageField(upload_to = 'cliente/imagens')
 
     def __str__(self) -> str:
         return self.nome
