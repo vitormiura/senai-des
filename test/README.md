@@ -1,1 +1,0 @@
-# django and drf projects
