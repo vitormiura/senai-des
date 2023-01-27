@@ -1,0 +1,29 @@
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block 'titulo' %} {% endblock %}</title>
+</head>
+<body>
+{% bootstrap_css %}
+<nav>
+    {% if user.is_authenticated %}
+        <a href="{% url 'index_home' %}">home</a>
+        <a href="{% url 'aluno_index' %}">aluno</a>
+        <a href="{% url 'aluno_cadastro' %}">cadastrar aluno</a>
+        <a href="{% url 'dashboard' %}">dashboard</a>
+        <a href="{% url 'sair' %}">sair</a>
+    {% else %}
+        <a href="{% url 'index_home' %}">home</a>
+        <a href="{% url 'aluno_index' %}">aluno</a>
+        <a href="{% url 'usuario_login' %}">login</a>
+    {% endif %}
+</nav>
+<div class="container" >
+{% block 'conteudo' %}
+
+{% endblock %}
+</div>
+</body>
+</html>

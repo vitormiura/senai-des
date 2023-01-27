@@ -1,0 +1,20 @@
+{% extends 'yeld.html' %}
+{% block 'titulo' %} Aluno {% endblock %}
+{% block 'conteudo' %}
+<h2>Lista de aluno</h2>
+<table class="table">
+    <thead>
+        <td>Nome</td>
+        <td>Telefone</td>
+        <td colspan="2" >Opções</td>
+    </thead>
+    {% for aluno in alunos %}
+    <tr>
+        <td>{{aluno.nome}}</td>
+        <td>{{aluno.telefone}}</td>
+        <td><a href="" class="btn btn-primary" > Editar</a></td>
+        <td><a href="" class="btn btn-danger" > Excluir</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'yeld.html' %}
+{% load bootstrap5 %}
+{% block 'titulo' %} Home {% endblock %}
+
+{% block 'conteudo' %}
+    <h2>Cadastre-se</h2>
+    {% bootstrap_messages %}
+    {% bootstrap_css %}
+    <form action="" method="post" class="form">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label">Usuário</label>
+          <input type="text" class="form-control" name="usuario" placeholder="Digite seu Usuário" value="{{ request.POST.usuario }}">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" placeholder="Digite seu Email" value="{{ request.POST.email }}">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nome</label>
+          <input type="text" class="form-control" name="primeiro" placeholder="Digite seu nome" value="{{ request.POST.primeiro }}"> 
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Senha</label>
+          <input type="password" class="form-control" name="senha1" placeholder="Digite sua senha">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Confirme sua senha</label>
+          <input type="password" class="form-control" name="senha2" placeholder="Digite sua senha novamente">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+{% endblock %}

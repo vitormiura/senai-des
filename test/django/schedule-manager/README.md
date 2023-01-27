@@ -1,0 +1,1 @@
+# Schedule manager made w/ Django framework

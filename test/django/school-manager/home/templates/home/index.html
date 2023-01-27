@@ -1,0 +1,32 @@
+{% load static %}
+{% include 'header.html' %}
+<body>
+    <div class="menuzin">
+        {% include 'menu.html' %}
+        {% if user.is_authenticated %} 
+        <div class="logado">
+            Hi, {{user.get_username}}
+            <a href="">dashboard</a>
+            <a href="{% url 'salvar_curso' %}">cadastrar</a>
+        </div>
+        {% else %}
+        <div>
+            <a href="">login</a>
+        </div>
+        {% endif %}   
+    </div>
+    <h1>Home</h1>
+    <img src="https://c.tenor.com/6a6N6IW-OGsAAAAd/monkey-swimming.gif" alt="monke" height="150" width="150">
+    <ul>
+    {% for monke in curso %}
+        <a href="{% url 'homedetalhes' monke.id %}"><li>ID: {{monke.id}}</li></a>
+        <li>Name: {{monke.nome}}</li>
+        <li>Price: {{monke.price}}</li>
+        <li>description: {{monke.description}}</li>
+        <li>Active: {{monke.active}}</li>
+        <img src="{{monke.image.url}}" alt="">
+        <hr>
+    {% endfor %}
+</ul>
+</body>
+</html>

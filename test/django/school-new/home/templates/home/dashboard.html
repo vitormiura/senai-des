@@ -1,0 +1,8 @@
+{% extends 'yeld.html' %}
+
+{% block 'titulo' %} Area Aluno {% endblock %}
+
+{% block 'conteudo' %}
+    {% csrf_token %}
+    <h2>Dashboard</h2>
+{% endblock %}

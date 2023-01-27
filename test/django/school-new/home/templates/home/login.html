@@ -1,0 +1,23 @@
+{% extends 'yeld.html' %}
+{% load bootstrap5 %}
+{% block 'titulo' %} Login {% endblock %}
+
+{% block 'conteudo' %}
+    <h2>Login</h2>
+    {% csrf_token %}
+    {% bootstrap_css %}
+    {% bootstrap_messages %}
+    <form action="" method="post" class="form">
+      {% csrf_token %}
+        <div class="mb-3">
+          <label class="form-label">Usuário</label>
+          <input type="text" class="form-control" name="login" placeholder="Digite seu Usuário">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Senha</label>
+          <input type="password" class="form-control" name="senha" placeholder="Digite sua senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a href="{% url 'usuario_cadastro' %}">Cadastre-se</a>
+      </form>
+{% endblock %}
